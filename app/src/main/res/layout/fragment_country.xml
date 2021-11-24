@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.countryflag.CountryFragment" />
+            type="com.example.countryflag.OverviewViewModel" />
     </data>
 
     <FrameLayout
