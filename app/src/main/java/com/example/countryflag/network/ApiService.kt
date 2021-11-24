@@ -1,6 +1,7 @@
 package com.example.countryflag.network
 
 import com.example.countryflag.CountryInfo
+import com.example.countryflag.CountryInfoResponce
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
@@ -23,7 +24,7 @@ private val retrofit = Retrofit.Builder()
 
 interface countryApiService {
     @GET("api/v0.1/countries/flag/images")
-    suspend fun getPhotos() : List<CountryInfo>
+    suspend fun getPhotos() : CountryInfoResponce
 }
 
 object CountryApi {

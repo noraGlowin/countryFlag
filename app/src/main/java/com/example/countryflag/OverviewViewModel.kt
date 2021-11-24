@@ -17,7 +17,7 @@ class OverviewViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val listResult = CountryApi.retrofitService.getPhotos()
-                status.value = "Success: ${listResult.size} photos retrieved"
+                status.value = "Success: ${listResult.data.size} photos retrieved"
             } catch (e: Exception) {
                 status.value = "Failure: ${e.message}"
             }
